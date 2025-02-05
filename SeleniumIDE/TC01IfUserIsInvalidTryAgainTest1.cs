@@ -18,21 +18,16 @@ public class TC01IfUserIsInvalidTryAgainTest
     public IDictionary<string, object> vars { get; private set; }
     private IJavaScriptExecutor js;
 
-/*   public void SetUp()
-    {
-        SetUp(driver);
-    }
-*/
     [SetUp]
     public void SetUp()
     {   
         ChromeOptions options = new ChromeOptions();
-        options.AddArgument("headless");
-        options.AddArgument("no-sandbox");
-        options.AddArgument("disable-dev-shm-usage");
-        options.AddArgument("disable-gpu");
-        options.AddArgument("window-size=1920,1080");
-
+        /*   options.AddArgument("headless");
+           options.AddArgument("no-sandbox");
+           options.AddArgument("disable-dev-shm-usage");
+           options.AddArgument("disable-gpu");
+          options.AddArgument("window-size=1920,1080");
+        */
 
         driver = new ChromeDriver(options);
         js = (IJavaScriptExecutor)driver;
